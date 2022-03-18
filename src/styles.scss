@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700;900&family=Roboto+Condensed:ital,wght@0,300;0,400;1,400;1,700&family=Sora:wght@300;400;700;800&family=Spline+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --hue-color: 180;
+
+    --primary-color: hsl(var(--hue-color), 60%, 50%);
+    --primary-color-alt: hsl(var(--hue-color), 35%, 55%);
+
+    --dark-color: hsl(220, 16%, 22%);
+    --light-color: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: var(--primary-color);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* CUSTOM STYLES */
+.button {
+	background-color: var(--primary-color);
+	color: var(--light-color);
+	padding: .5rem 1rem;
+	border: 1px solid rgba($color: #000000, $alpha: 0.2);
+	border-radius: 5px;
+	width: 100px;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--primary-color-alt);
+	}
+}
+
+.button-flex {
+	display: inline-flex;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+}
+/* END CUSTOM STYLES */
+
+#no-script-content {
+	background-color: var(--light-white);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+
+	.title {
+		font-size: 4rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		text-shadow: 2px 2px var(--dark-color);
+		word-spacing: 0.5rem;
+	}
+
+	.sub-title {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		font-style: italic;
+	}
+
+	p {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	#no-script-content {
+		text-align: center;
+		padding: 0 1rem;
+
+		.title {
+			font-size: 3rem;
+		}
+
+		.sub-title {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
